@@ -1,0 +1,866 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Crimson+Text:wght@600;700&family=Press+Start+2P&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Crimson+Text:wght@600;700&family=IBM+Plex+Sans&family=Press+Start+2P&family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #ffffff;
+  }
+
+  body{
+    background-color: #111010 !important;
+  }
+
+
+
+  
+/* Add a black background color to the top navigation */
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #111010;
+  overflow: hidden;
+  width: 82vw;
+}
+
+
+.tabs{
+  float: right;
+  margin-right: 6px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.6s color;
+}
+
+.logo{
+  padding-left: 0 !important;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: goldenrod
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: goldenrod;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+/* link that contains should open and close the topnav (.icon) */ 
+@media screen and (max-width: 800px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    padding-bottom: 50px;
+  }
+  .tabs{
+    float: left;
+    text-decoration: underline;
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .tabs a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+
+/* main */
+.home{
+  position: relative;
+  width: 82vw;
+  height: 80vh;
+  background-color: #111010;
+  margin: 0 auto;
+  justify-content: center;
+  border-radius: 25px;
+  margin-top: 140px;
+}
+
+.home-contents{
+  display: flex;
+}
+
+.signIn{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+}
+
+.crypto-pic{
+  flex: 1;
+}
+
+.crypto-pic img{
+  width: 400x;
+  height: 300px;
+}
+
+h2{
+  font-size: 40px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px;
+  width: 540px;
+}
+
+.sign-in-button{
+  background-color: goldenrod;
+  height: 60px;
+  width: 360px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: 0.3s background-color;
+}
+
+.sign-in-button:hover {
+  background-color: #f0a431; /* or any other darker gold color you prefer */
+  }
+
+
+.alt-button1{
+  background-color: rgb(255, 255, 255);
+  height: 60px;
+  width: 170px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s background-color ease-in-out;
+}
+
+.alt-button1:hover{
+  background-color: #d6d2d2;
+}
+
+.alt-button2{
+  background-color: rgb(255, 255, 255);
+  height: 60px;
+  width: 170px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  color: black;
+  margin-left: 16px;
+  cursor: pointer;
+  transition: 0.3s background-color ease-in-out;
+}
+
+.alt-button2:hover{
+  background-color: #d6d2d2;
+}
+
+span{
+  color: white;
+  font-size: 18px;
+  margin-left: 110px;
+}
+
+/* cookies */
+#cookies-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+}
+
+#cookies-popup p {
+  margin: 0;
+}
+
+#accept-cookies {
+  background-color: #fff;
+  color: #333;
+  padding: 4px 16px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#accept-cookies:hover {
+  background-color: #f2f2f2;
+}
+
+#learn-more {
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#learn-more:hover {
+  text-decoration: none;
+}
+
+
+/* market */
+
+.market{
+  display: block;
+  margin-top: 200px;
+  margin-bottom: 140px;
+  width: 82vw;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+
+.market-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.market-title h3 {
+  position: relative;
+  font-size: 40px; /* Adjust the font size as needed */
+  margin-right: 10px; /* Add some margin between the two elements */
+  float: left;
+  margin-bottom: 10px;
+}
+
+.market-title .more {
+  font-size: 16px; /* Adjust the font size as needed */
+  position: relative;
+  float: right;
+}
+
+.more {
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-left: auto; /* Add this property to float the element to the right */
+  transition: 0.3s color;
+}
+
+.more-markets{
+  transition: color 0.2s ease-in-out;
+}
+
+.more-markets:hover{
+  color: goldenrod;
+  cursor: pointer;
+}
+
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  background-color: #ffffff;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#coin-table tbody tr:hover {
+  background-color: goldenrod; /* Change the background color to gold */
+  cursor: pointer;
+}
+
+#coin-table tbody tr:hover td {
+  color: white; /* Change the text color to white */
+}
+
+
+th,
+td {
+  padding: 8px;
+  color: #111010;
+}
+
+th {
+  background-color: rgb(34, 36, 44);
+  color: white;
+}
+
+
+td.positive {
+  color: green;
+}
+
+td.negative {
+  color: red;
+}
+
+.signup2-text{
+  color: #ffffff;
+  margin-top: 60px;
+  font-size: 26px;
+}
+
+
+/* portfolio */
+section{
+  height: 100vh;
+  width: auto;
+  margin-top: 140px;
+  padding: 100 0 100 0;
+}
+
+.portfolio-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 82vw;
+  margin: 0 auto;
+}
+
+.left-column{
+  flex: 1;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+.right-column{
+  flex: 1;
+  flex-direction: column;
+}
+
+.portfolio-title{
+  font-size: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.portfolio-info{
+  font-size: 16px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.step{
+  display: flex;
+  flex-direction: row;
+  margin-top: 36px;
+  align-items: center;
+}
+
+.step-picture{
+  margin: 20px 40px 10px 0;
+}
+
+.step-title{
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+
+
+.right-column{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.portfolio-app{
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 25px;
+  height: 620px;
+  width: 280px;
+}
+
+/* nfs */
+.nft-section{
+  height: 80vh;
+  width: auto;
+  margin-top: 80px;
+  padding: 100 0 100 0;
+}
+
+.nft-text{
+  width: 82vw;
+  margin: 0 auto;
+}
+
+.nft-title{
+  font-size: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.nft-info{
+  font-size: 20px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.nft-container {
+  display: flex;
+  width: 82vw;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.nft-card {
+  position: relative; /* make nft-card a positioned element */
+}
+
+.nft-card:hover {
+  cursor: pointer;
+}
+
+.nft-card img {
+  flex-direction: row;
+  height: 260px;
+  width: 260px;
+  border-radius: 15px;
+  filter: brightness(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.nft-card:hover .nft-img {
+  filter: brightness(40%);
+}
+
+
+.nft-collection {
+  display: none;
+  position: absolute; /* position nft-collection absolutely */
+  bottom: 0; /* position nft-collection at the bottom of nft-card */
+  left: 0; /* position nft-collection at the left of nft-card */
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.nft-card:hover .nft-collection {
+  display: block;
+}
+
+.nft-signup-container{
+  width: 82vw;
+  margin: 0 auto;
+}
+
+/* newsletter */
+
+.newsletter{
+  height: 60vh;
+}
+
+.newsletter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(34, 36, 44);
+  width: 82vw;
+  height: 90%;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+.newsletter-title{
+  font-size: 3.5em;
+  margin: 0 auto;
+}
+
+.newsletter-info {
+  font-size: 1.5em;
+}
+
+.newsletter-text-container {
+  width: 80%;
+  margin: 0 auto;
+
+}
+
+.email {
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  margin: 2em auto;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
+  color: #111010;
+  padding-left: 20px;
+  font-size: 20px
+}
+
+.email::placeholder {
+  font-size: 20px;
+
+}
+
+.submit-button {
+  height: 50px;
+  padding: 0 1em;
+  margin-left: 1em;
+  background-image: linear-gradient(90deg, rgb(229, 154, 33) 0%, rgb(245, 193, 62) 100%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  display: inline-block
+}
+
+
+.terms{
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.checkbox{
+  margin-top: 40px;
+}
+
+.checkbox p {
+  margin-left: 1em;
+  font-size: 16px;
+  display: inline;
+}
+
+
+
+/* footer */
+.icon{
+  margin-right: 10px;
+}
+
+/* media queries */
+/* nav */
+@media (max-width: 600px){
+  .tabs a{
+    padding: 0;
+    padding-bottom: 8px;
+    
+  }
+}
+/* home */
+@media (max-width: 800px){
+
+  .boxs{
+    display: inline-block;
+  }
+  .ci{
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+/* home */
+
+.home{
+  display: inline-block;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.home-contents{
+  display: inline-block;
+  width: 82vw;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.signIn{
+  justify-content: center;
+  margin-left: 50px;
+}
+
+h2{
+  width: 500px
+}
+
+.home-img{
+  display: none;
+}
+
+.signIn{
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+}
+
+span{
+  margin-right: 110px;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+} 
+
+/* market */
+
+.market{
+  margin-top: 100px;
+}
+
+
+.market-title h3 {
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+.market-title .more {
+  font-size: 12px; /* Adjust the font size as needed */
+}
+
+.more {
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+.signup2-text p{
+  color: #ffffff;
+  margin-top: 60px;
+  font-size: 10px;
+}
+
+/* portfolio */
+.portfolio-container{
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 82vw;
+}
+
+.left-column{
+  flex: 1;
+  width: 160px;
+  flex-direction: column;
+  margin-right: 6px
+}
+
+.right-column{
+  flex: 1;
+  flex-direction: column;
+}
+
+.portfolio-title{
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.portfolio-info{
+  font-size: 10px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.step{
+  margin-top: 28px;
+}
+
+.step-picture{
+  margin: 12px 28px 12px 0;
+}
+
+.step-title{
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.step-info{
+  font-size: 10px;
+}
+
+
+.right-column{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 25px;
+  height: 400px;
+  width: 180px;
+  margin-top: 34px;
+}
+
+  /* nft */
+  .nft-section{
+    height: 80vh;
+    width: auto;
+    margin-top: 30px;
+    padding: 50 0 50 0;
+  }
+  
+  .nft-text{
+    width: 82vw;
+  }
+  
+  .nft-title{
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+  
+  .nft-info{
+    font-size: 12px;
+    margin-bottom: 28px;
+  }
+  
+  .nft-container {
+    display: flex;
+    width: 82vw;
+  }
+  
+  .nft-card img {
+    flex-direction: column;
+    height: 110px;
+    width: 110px;
+    border-radius: 15px;
+  }
+    
+  .nft-collection {
+    padding: 5px;
+    font-size: 12px;
+    margin-bottom: 0px;
+    margin-left: 6px;
+  }
+  
+  .nft-card:hover .nft-collection {
+    display: block;
+  }
+  
+  .nft-signup-container{
+    width: 82vw;
+    margin: 0 auto;
+  }
+
+  .signup2-text p{
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  /* newsletter */
+  .newsletter{
+    height: 60vh;
+    margin: 0 auto;
+  }
+  
+  .newsletter-container {
+    width: 82vw;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  
+  .newsletter-title{
+    font-size: 2em;
+  }
+  
+  .newsletter-info {
+    font-size: 1em;
+  }
+  
+  .newsletter-text-container {
+    width: 80%;
+  }
+  
+  .email {
+    height: 30px;
+    margin: 1.5em auto;
+    border-radius: 2px;
+    padding-left: 14px;
+    font-size: 14px;
+    width: 300px;
+  }
+  
+  .email::placeholder {
+    font-size: 14px;
+  
+  }
+  
+  .submit-button {
+    height: 30px;
+    padding: 0 1em;
+    font-size: 14px;
+    display: inline-block;
+  }
+  
+  
+  .terms{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+  
+  .checkbox{
+    margin-top: 20px;
+  }
+  
+  .checkbox p {
+    margin-left: 1em;
+    font-size: 12px;
+    display: inline;
+  }
+
+}
