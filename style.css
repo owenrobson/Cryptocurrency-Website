@@ -597,16 +597,6 @@ section{
     
   }
 }
-/* home */
-@media (max-width: 800px){
-
-  .boxs{
-    display: inline-block;
-  }
-  .ci{
-    display: inline-block;
-  }
-}
 
 @media only screen and (max-width: 1100px) {
 /* home */
@@ -651,6 +641,70 @@ span{
   justify-content: center;
   text-align: center;
 } 
+}
+
+@media (max-width: 800px){
+.boxs{
+  display: inline-block;
+}
+.ci{
+  display: inline-block;
+}
+}
+
+
+@media (max-width: 415px){
+.home{
+  margin-top: 40px;
+  height: 80vh;
+}
+
+.signIn{
+  justify-content: center;
+  margin-left: 50px;
+}
+
+h2{
+  width: 320px;
+  margin: 0 auto;
+}
+
+.signIn h2{
+  margin-bottom: 40px;
+}
+
+.signIn button{
+width: 280px;
+height: 50px;
+margin: 0 auto;
+}
+
+.sign-in-button{
+  font-size: 18px;
+}
+
+.sign-in-break{
+  width: 280px;
+  margin: 0 auto;
+}
+
+.alt-sign-in button{
+  margin-bottom: 20px;
+}
+
+.alt-button1 button{
+  width: 280px;
+  height: 50px;
+}
+}
+
+span{
+  display: contents;
+} 
+
+.sign-in-break{
+  padding: 10px 0 10px 0;
+}
 
 /* market */
 
@@ -676,6 +730,38 @@ span{
   margin-top: 60px;
   font-size: 10px;
 }
+
+@media (max-width: 415px) {
+#coin-table {
+  font-size: 12px;
+}
+
+#coin-table th,
+#coin-table td {
+  padding: 5px;
+}
+.market-title h3 {
+  font-size: 20px; /* Adjust the font size as needed */
+}
+
+.more p{
+  margin-bottom: 0;
+  font-size: 10px;
+}
+
+.signup2-text{
+  font-size: 18px;
+}
+
+.signup2-container button{
+width: 280px;
+height: 50px;
+margin: 0 auto;
+align-items: center;
+margin-top: 10px;
+}
+}
+
 
 /* portfolio */
 .portfolio-container{
@@ -743,6 +829,25 @@ span{
   margin-top: 34px;
 }
 
+@media (max-width: 415px) {
+  .portfolio{
+    height: 100%;
+    margin-bottom: 140px;
+  }
+  .step-picture{
+    margin: 0;
+  }
+  .right-column{
+    display: none;
+  }
+  .sign-in-button{
+    width: 280px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+}
+
   /* nft */
   .nft-section{
     height: 80vh;
@@ -772,7 +877,6 @@ span{
   }
   
   .nft-card img {
-    flex-direction: column;
     height: 110px;
     width: 110px;
     border-radius: 15px;
@@ -797,6 +901,18 @@ span{
   .signup2-text p{
     font-size: 20px;
     margin: 0;
+  }
+
+  @media (max-width: 415px) {
+    .nft-container {
+      display: flex;
+      width: 100%;
+    }
+    .nft-collection {
+      flex-wrap: wrap;
+      padding: 5px;
+    }
+
   }
   
   /* newsletter */
@@ -863,4 +979,3 @@ span{
     display: inline;
   }
 
-}
